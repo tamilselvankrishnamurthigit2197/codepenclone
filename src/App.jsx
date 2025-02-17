@@ -51,7 +51,7 @@ const App = () => {
     <iframe
       srcDoc={srcDoc}
       title='output'
-      sandbox='allow-scripts'
+      sandbox='allow-scripts allow-top-navigation allow-popups'
       frameBorder={0}
       width="100%"
       height="100%" />
