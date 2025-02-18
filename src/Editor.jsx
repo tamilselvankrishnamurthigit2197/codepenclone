@@ -17,6 +17,7 @@ export default function Editor(props){
       onChange} = props;
 
       const [open, setOpen] = useState(true)
+      const [darkMode, setDarkMode] = useState(false);
 
       function handleChange(editor, data, value) {
         onChange(value);
