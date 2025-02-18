@@ -47,11 +47,14 @@ const App = () => {
     </div>
 
     {/* frame of last */}
+
+      {/* allow-top-navigation-by-user-activation allow-modals allow-forms allow-same-origin allow-popups */}
+      
     <div className='pane'>
     <iframe
       srcDoc={srcDoc}
       title='output'
-      sandbox='allow-scripts allow-top-navigation-by-user-activation allow-modals allow-forms allow-same-origin allow-popups'
+      sandbox='allow-scripts'
       frameBorder={0}
       width="100%"
       height="100%" />

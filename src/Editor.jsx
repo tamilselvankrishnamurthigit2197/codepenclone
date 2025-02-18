@@ -7,8 +7,7 @@ import 'codemirror/mode/javascript/javascript'
 import {Controlled as ControlledEditor} from 'react-codemirror2'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faCompressAlt, faExpandAlt} from '@fortawesome/free-solid-svg-icons'
-
+import {faCompressAlt, faExpandAlt, faMoon, faSun} from '@fortawesome/free-solid-svg-icons'
 
 export default function Editor(props){
   const {
@@ -26,12 +25,20 @@ export default function Editor(props){
     <div className={`editor-container ${open ? '' : 'collapsed'}`}>
       <div className='editor-title'>
         {displayName}
+
         <button
           type='button'
           className='expand-collapse-btn'
           onClick={()=>setOpen(prevOpen => !prevOpen)}>
             <FontAwesomeIcon 
               icon={open ? faCompressAlt : faExpandAlt} />
+          </button>
+          <button
+            type="button"
+            className="expand-collapse-btn"
+            onClick={()=>setDarkMode(prev => !prev)}>
+            <FontAwesomeIcon 
+              icon={darkMode ? faSun : faMoon} />
           </button>
       </div>
 
