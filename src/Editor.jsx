@@ -23,7 +23,7 @@ export default function Editor(props){
         onChange(value);
       }
   return(
-    <div className={`editor-container ${open ? '' : 'collapsed'}`}>
+    <div className={`editor-container ${open ? '' : 'collapsed'} ${darkMode ? 'dark mode' : ''}`}>
       <div className='editor-title'>
         {displayName}
 
@@ -51,7 +51,7 @@ export default function Editor(props){
         options={{
           mode:language,
           lint:true,
-          theme:'material',
+          theme:darkMode ? 'material-darker' : 'default',
           lineWrapping:true,
           lineNumbers:true,
         }} />

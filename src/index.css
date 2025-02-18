@@ -41,6 +41,10 @@ body{
   position: absolute;
   overflow: hidden !important;
 }
+.editor-container.dark-mode {
+  background-color: #1e1e1e;
+  color: white;
+}
 
 .CodeMirror{
   height: 100% !important;
